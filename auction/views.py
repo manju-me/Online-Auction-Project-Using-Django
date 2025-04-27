@@ -950,7 +950,7 @@ def Add_Product(request):
         ses = Session_Time.objects.get(id=sett1)
         v_add=v.objects.get(id=v)
         images=i.Image.objects.get(id=i)
-        pro1=Product.objects.create(session_Time=ses,sub_category=sub, ins=it, v_add=v,min_price=pr, desc=d,images=i,session)
+        pro1=Product.objects.create(session_Time=ses,sub_category=sub, ins=it, v_add=v,min_price=pr, desc=d,images=i,session_name=session)
         auc=Aucted_Product.objects.create(product=pro1,user=sell)
         terror = True
     d = {'sed': sed,'sett':sett,'cat': cat,'scat':scat,'date1': date1,'terror':terror,'error':error}

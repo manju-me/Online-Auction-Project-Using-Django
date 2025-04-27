@@ -2,17 +2,17 @@
 {% block body %}
 {% load static %}
 
-{% ifequal error "yes" %}
+{% if user_is_authenticated == "yes" %}
 <script>
     alert('logged in successfully');
     window.location=('{% url 'admin_home' %}');
 </script>
-{% endifequal %}
-{% ifequal error "not" %}
+{% endif %}
+{% if  user_is_not_authenticated == "not" %}
 <script>
     alert('Username & Password are not Matching');
 </script>
-{% endifequal %}
+{% endif %}
 
 <div class="container">
 <div class="container-fluid" style="border-radius:10px;width:70%;margin-top:6%;background-color:whitesmoke">
